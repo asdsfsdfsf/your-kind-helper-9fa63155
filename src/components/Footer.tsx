@@ -1,9 +1,10 @@
-import { Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import StoryShortLogo from "./StoryShortLogo";
 
 const footerLinks = {
   product: [
-    { label: "Pricing", href: "#" },
-    { label: "Blog", href: "#" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "#" },
     { label: "Tools", href: "#" },
     { label: "Community", href: "#" },
@@ -19,7 +20,7 @@ const footerLinks = {
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
     { label: "Refund Policy", href: "#" },
-    { label: "Affiliate Program", href: "#", badge: "NEW" },
+    { label: "Affiliate Program", href: "/affiliate", badge: "NEW" },
   ],
 };
 
@@ -30,12 +31,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & copyright */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary-foreground" />
-              </div>
+            <Link to="/" className="flex items-center gap-2 mb-4">
+              <StoryShortLogo size={32} />
               <span className="text-xl font-bold">StoryShort</span>
-            </div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               Copyright © 2024 StoryShort
             </p>
@@ -50,12 +49,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -84,8 +83,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
                   >
                     {link.label}
@@ -94,7 +93,7 @@ const Footer = () => {
                         {link.badge}
                       </span>
                     )}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
