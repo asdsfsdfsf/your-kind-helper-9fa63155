@@ -5,21 +5,17 @@ const footerLinks = {
   product: [
     { label: "Pricing", href: "/pricing" },
     { label: "Blog", href: "/blog" },
+    { label: "Community", href: "/community" },
     { label: "Contact", href: "#" },
-    { label: "Tools", href: "#" },
-    { label: "Community", href: "#" },
   ],
   tools: [
     { label: "AI Video Generator", href: "#" },
-    { label: "AI Influencer Generator", href: "#" },
     { label: "AI Ad Generator", href: "#" },
-    { label: "UGC Sora", href: "#" },
-    { label: "AI Long Form Video Generator", href: "#" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Refund Policy", href: "#" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "Refund Policy", href: "/refund" },
     { label: "Affiliate Program", href: "/affiliate", badge: "NEW" },
   ],
 };
