@@ -33,10 +33,10 @@ const Navbar = () => {
         {/* Right side */}
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="sm" className="hidden sm:inline-flex" asChild>
-            <Link to="/auth">Sign In</Link>
+            <Link to="/signin">Sign In</Link>
           </Button>
           <Button variant="hero" size="sm" asChild>
-            <Link to="/auth">Get Started</Link>
+            <Link to="/signup">Get Started</Link>
           </Button>
         </div>
       </div>
